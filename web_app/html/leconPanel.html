@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Application Chinoise </title>
+		<link rel="stylesheet" type="text/css" href="../styles/style.css">
+		<link rel="icon" type="image/jpg" href="../assets/yin_yang.jpg" />
+		<script type="text/javascript" src="../javascript/main.js"></script>
+		<!-- Mat -->
+	</head>
+	<body>
+		<header id="TitreLecon">
+			<!--<h2>Leçon 1 : Se saluer, nom et nationalité</h2>-->
+			<script type="text/javascript">creerTitreLecon();</script>
+
+		</header>
+		<section id="middle">
+
+			<!--
+			<ul>
+				<div id="listeSymboles">
+					<li id="Symbole">Symbole</li>
+					<li id="Symbole">Symbole2</li>
+					<img id="Symbole" src="../assets/voc/兴.jpg"/>
+
+				</div>
+				<li id="Pinyin">Pinyin</li>
+				<li id="Traduction">Traduction</li>
+			</ul>-->
+			<!--<script type="text/javascript">setChoixVoc(2);</script>-->
+			<script type="text/javascript">creerVocLecon();</script>
+		</section>
+
+		<section class="bottom">
+			<a id="Precedent" href="./leconPanel.html" onclick="boutonPrecedent();">< Précédent</a>
+			<a id="Retour" href="./apprendre.html" >Retour</a>
+			<div id="Pagination"></div>
+			<a id="Terminer" href="../index.html" >Terminer</a>
+			<a id="Suivant" href="./leconPanel.html" onclick="boutonSuivant();">Suivant ></a>
+
+			<script type="text/javascript">cssHidden();</script>
+			<script type="text/javascript">creerPagination();</script>
+		</section>
+
+
+
+	</body>
+</html>

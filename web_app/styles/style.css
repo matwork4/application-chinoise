@@ -1,0 +1,144 @@
+
+header{
+	background-color: dodgerblue;
+	overflow: hidden;
+	height: 100px;
+}
+
+h1, h2{
+    height: 50px;
+    margin: 40px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: calibri;
+}
+
+h1{
+	width: 500px;
+    background: darkolivegreen;
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+h2{
+    width: 800px;
+    background: seagreen;
+    color: white;
+    text-align: left;
+    font-size: 1.6em;
+
+    position: absolute;
+    left: 20px;
+    top: -20px;
+}
+
+body{
+	background-color: sandybrown;
+}
+
+ul{
+	list-style-type: none;
+}
+
+#Symbole, #Pinyin, #Traduction{
+    width: 260px;
+    height: 50px;
+    margin: 60px auto;
+
+    background: greenyellow;
+    color: black;
+
+    font-family: calibri;
+    font-size: 1.8em;
+    text-decoration: none;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#Symbole{
+    width: 110px;
+    height: 110px;
+    margin: 20px;
+}
+
+#listeSymboles{
+    display: flex;
+    flex-direction: row;
+    background-color: paleturquoise;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+li a{
+	width: 500px;
+    height: 60px;
+    margin: 60px auto;
+
+    background: white;
+    color: black;
+
+    font-family: calibri;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-align: center;
+
+    margin-top: 110px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Apprendre,#Jouer{
+	font-size: 2em;
+}
+
+#Lecon0{
+    height: 50px;
+}
+#Lecon1,#Lecon2,#Lecon3,#Lecon4,#Lecon5,#Lecon6{
+    margin-top: 50px;
+    height: 50px;
+}
+
+span{
+	position: absolute;
+    margin-left: 350px;
+    margin-top: 10px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 80px;
+
+    font-family: calibri;
+    font-size: 1.4em;
+    text-align: center;
+}
+#Suivant, #Precedent, #Terminer, #Retour{
+    width: 140px;
+    height: 50px;
+    margin-top: 20px;
+
+    background: royalblue;
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#Terminer, #Retour{
+    visibility: hidden;
+    background-color: lightsteelblue;
+}
+
+
