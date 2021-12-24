@@ -1,4 +1,6 @@
-
+/* Conçu par Mathis R.
+ * Année 2021/2022
+ */
 
 /* ===================================
 *  Classe Vocabulaire :
@@ -375,13 +377,13 @@ function changeCouleurJeux(){
 	choixJeu=getChoixJeu();
 
 	if(choixJeu==1 || choixJeu==2){
-		document.getElementById("middleJeu").style.background = "#ec7853";
+		document.getElementById("middleJeu").style.background = "rgba(236, 120, 83, 0.9)";
 		
 	}else if(choixJeu==3 || choixJeu==4){
-		document.getElementById("middleJeu").style.background = "#af4b4d";
+		document.getElementById("middleJeu").style.background = "rgba(175, 75, 77, 0.9)";
 		
 	}else if(choixJeu==5 || choixJeu==6){
-		document.getElementById("middleJeu").style.background = "#7d3046";
+		document.getElementById("middleJeu").style.background = "rgba(125, 48, 70, 0.9)";
 	}
 	
 	document.getElementById("jouerTitreLecon").style.background = "#5a111b";
@@ -484,12 +486,14 @@ function getScore(){
 *  ===================================
 */
 function creerJeuPanel(){
-	typeJeu=parseInt(getChoixJeu());
+	indiceTypeJeu=parseInt(getChoixJeu())-1;
 	idLecon=parseInt(getChoixLecon());
 	idVoc=parseInt(getChoixVoc());
 	let leconLength = lecons.liste[idLecon].liste.length;
 	
-	//lecons.liste[idLecon].liste[idVoc].affiche();
+	
+	let tabTypeReponses = creerTabTypeReponses(); //Tableau contenant des strings caractère, pinyin ou traduction
+	console.log("typeJeu = "+tabTypeReponses[indiceTypeJeu]);
 	
 	//Si premier item, on melange la liste
 	if(idVoc==0){
@@ -509,7 +513,7 @@ function creerJeuPanel(){
 	for(let i=0;i<=3;i++){
 		if(i==idBonneReponse){
 			//console.log("indicesMelanges[idVoc] = "+indicesMelanges[idVoc]);
-			tableauReponses[i]=lecons.liste[idLecon].liste[indicesMelanges[idVoc]].pinyin;
+			tableauReponses[i]=lecons.liste[idLecon].liste[indicesMelanges[idVoc]][tabTypeReponses[indiceTypeJeu]];
 		}else{
 			while(recommence==1){
 				recommence=0;
@@ -524,7 +528,8 @@ function creerJeuPanel(){
 				}
 			}
 			recommence=1;
-			tableauReponses[i]=lecons.liste[idLecon].liste[r[i]].pinyin;
+			//tableauReponses[i]=lecons.liste[idLecon].liste[r[i]].pinyin;
+			tableauReponses[i]=lecons.liste[idLecon].liste[r[i]][tabTypeReponses[indiceTypeJeu]];
 		}
 	}
 	console.log("tableauReponses = "+tableauReponses);
@@ -548,18 +553,32 @@ function creerJeuPanel(){
 
 	document.getElementById("middleJeu").appendChild(element);
 
+	if(indiceTypeJeu==0 || indiceTypeJeu==1){
+		//Créer une liste de caractères puis l'injecte au html
+		let symbolesLength = lecons.liste[idLecon].liste[indicesMelanges[idVoc]].caractere.length;
+		let pathSymboles = new Array(symbolesLength);
+		let symboles = new Array(symbolesLength);
+		for(let i=0;i<symbolesLength;i++){
+			symboles[i] = lecons.liste[idLecon].liste[indicesMelanges[idVoc]].caractere[i];
+			pathSymboles[i] = document.createElement("li");
+			pathSymboles[i].innerHTML = "<img id=\"Symbole\" src=\"../assets/voc/"+symboles[i]+".jpg\"/>"
 
-	//Créer une liste de caractères puis l'injecte au html
-	let symbolesLength = lecons.liste[idLecon].liste[indicesMelanges[idVoc]].caractere.length;
-	let pathSymboles = new Array(symbolesLength);
-	let symboles = new Array(symbolesLength);
-	for(let i=0;i<symbolesLength;i++){
-		symboles[i] = lecons.liste[idLecon].liste[indicesMelanges[idVoc]].caractere[i];
-		pathSymboles[i] = document.createElement("li");
-		pathSymboles[i].innerHTML = "<img id=\"Symbole\" src=\"../assets/voc/"+symboles[i]+".jpg\"/>"
+			document.getElementById("listeSymboles").appendChild(pathSymboles[i]);
+		}
+	//Créer le modèle pinyin
+	}else if(indiceTypeJeu==2 || indiceTypeJeu==3){
+		element2 = document.createElement("li");
+		element2.innerHTML = "<li id=\"Modele\">"+lecons.liste[idLecon].liste[indicesMelanges[idVoc]].pinyin+"</li>";
+		document.getElementById("listeSymboles").appendChild(element2);
 
-		document.getElementById("listeSymboles").appendChild(pathSymboles[i]);
+	//Créer le modèle traduction
+	}else if(indiceTypeJeu==4 || indiceTypeJeu==5){
+		element2 = document.createElement("li");
+		element2.innerHTML = "<li id=\"Modele\">"+lecons.liste[idLecon].liste[indicesMelanges[idVoc]].traduction+"</li>";
+		document.getElementById("listeSymboles").appendChild(element2);
 	}
+
+
 	//Cache le bouton suivant
 	document.getElementById("Suivant").style.visibility = "hidden";
 	//Il n'a pas encore joue
@@ -586,6 +605,8 @@ function testReponse(numReponse){
 	idVoc=parseInt(getChoixVoc());
 	let leconLength = lecons.liste[idLecon].liste.length;
 
+	let tabTypeReponses = creerTabTypeReponses();
+
 	//console.log("Réponse numéro "+numReponse);
 
 	let indicesMelanges = new Array(leconLength);
@@ -596,7 +617,7 @@ function testReponse(numReponse){
 	console.log("element : "+stringReponse);
 	
 	//On test si on a choisit la bonne réponse
-	if(stringReponse == lecons.liste[idLecon].liste[indicesMelanges[idVoc]].pinyin){
+	if(stringReponse == lecons.liste[idLecon].liste[indicesMelanges[idVoc]][tabTypeReponses[indiceTypeJeu]]){
 		console.log("Bonne réponse !");
 		//On met en vert la bonne réponse choisit
 		document.getElementById("reponse"+numReponse).children[0].style.background = "lightgreen";
@@ -609,7 +630,7 @@ function testReponse(numReponse){
 		//On met en vert la réponse correcte attendue
 		for(let i=1;i<=4;i++){
 			var stringCorrection = document.getElementById("reponse"+i).children[0].text;
-			if(stringCorrection == lecons.liste[idLecon].liste[indicesMelanges[idVoc]].pinyin){
+			if(stringCorrection == lecons.liste[idLecon].liste[indicesMelanges[idVoc]][tabTypeReponses[indiceTypeJeu]]){
 				document.getElementById("reponse"+i).children[0].style.background = "lightgreen";
 			}
 		}
@@ -645,21 +666,22 @@ function creerScore(){
 
 }
 
+/* ===================================
+*  Fonction creerTabTypeJeux :
+*  Creer un tableau correspondant aux types de réponses pour les jeux
+*  ===================================
+*/
+function creerTabTypeReponses(){
+	let tabTypeReponses = [
+		"pinyin",
+		"traduction",
+		"caractere",
+		"traduction",
+		"caractere",
+		"pinyin"]
+
+	return tabTypeReponses;
+}
 
 
-//Ensuite il faut implémenter les autres types de jeu 
-
-
-
-
-
-
-
-//Osef
-function sayHello(){
-	console.log("Hello", myName);
-	return "John";
-};
-var myName = "Bob";
-myName = sayHello();
 

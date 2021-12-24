@@ -1,10 +1,16 @@
+/* Conçu par Mathis R.
+ * Année 2021/2022
+ */
 
 header{
-	background-color: #15465e;
+	/*background-color: #15465e;*/
+    background-color: rgba(21, 70, 94, 0.85);
 	overflow: hidden;
 	height: 100px;
-    margin: -10px;
+    margin: -15px;
     padding-bottom: 10px;
+
+    box-shadow: 3px 3px 15px 2px black;
 }
 
 h1, h2{
@@ -33,7 +39,7 @@ h1{
 }
 
 h2{
-    width: 800px;
+    width: 600px;
     background: #0c413d;
     color: white;
     text-align: left;
@@ -47,10 +53,13 @@ h2{
 
 body{
 	background-color: #559c9e;
+    overflow-x: hidden;
 }
 
 #middle{
-    background-color: #15465e;
+    /*background-color: #15465e;*/
+    background-color: rgba(21, 70, 94, 0.9);
+    box-shadow: 2px 2px 10px 2px black;
     padding-bottom: 20px;
     width: 950px;
     border-radius: 50px;
@@ -231,7 +240,8 @@ span{
     flex-direction: column;
     justify-content: center;
 
-    background-color: #15465e;
+    /*background-color: #15465e;*/
+    background-color: rgba(21, 70, 94, 0.9);
 
     margin: 30px;
     padding: 50px;
@@ -240,16 +250,19 @@ span{
     height: 200px;
 
     border-radius: 20px;
-    /*box-shadow: 2px 2px 5px 2px black;*/
+    box-shadow: 2px 2px 12px 1px black;
 }
 #btnAffiche1{
-    background-color: #ec7853;
+    /*background-color: #ec7853;*/
+    background-color: rgba(236, 120, 83, 0.9);
 }
 #btnAffiche2{
-    background-color: #af4b4d;
+    /*background-color: #af4b4d;*/
+    background-color: rgba(175, 75, 77, 0.9);
 }
 #btnAffiche3{
-    background-color: #7d3046;
+    /*background-color: #7d3046;*/
+    background-color: rgba(125, 48, 70, 0.9);
 }
 
 
@@ -278,10 +291,13 @@ h3{
 }
 
 #jouerHeader{
-    background-color: #af4b4d;
+    /*background-color: #af4b4d;*/
+    background-color: rgba(175, 75, 77, 0.9);
 }
 #jouerBody{
     background-color: #ecb45f;
+    background-image: url("../assets/wallpapers/lanternes.jpg");
+    background-size: cover;
 }
 
 #reponsesHaut, #reponsesBas{
@@ -349,6 +365,56 @@ h3{
     opacity: 0.85;
 }
 
+#Modele{
+    width: 350px;
+    height: 60px;
+    line-height: 60px;
 
+    background-color: whitesmoke;
+    text-align: center;
 
+    font-family: calibri;
+    font-size: 1.8em;
+    font-weight: bold;
 
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 2px black;
+
+}
+
+#bodyIndex{
+    background-image: url("../assets/wallpapers/fleures.jpg");
+    background-size: cover;
+}
+
+#bodyApprendre{
+    background-image: url("../assets/wallpapers/dessinTemple.jpg");
+    background-size: cover;
+}
+
+#Credits{
+    background-color: rgba(21, 70, 94, 0.80);
+    width: 300px;
+    height: 125px;
+    margin-left: 20px;
+    text-align: center;
+    padding-right: 20px;
+
+    position: absolute;
+    right: 120px;
+    bottom: 60px;
+
+    font-family: calibri;
+    font-size: 1.4em;
+    color: white;
+    font-style: italic;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 2px black;
+    
+}
+
+#Credits li{
+    margin: 10px auto;
+}
