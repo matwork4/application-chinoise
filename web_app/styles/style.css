@@ -26,8 +26,10 @@ h1{
     text-align: center;
     font-size: 2.5em;
     
+    background: white;
+}
+#h1Menu{
     background: whitesmoke;
-
 }
 
 h2{
@@ -124,10 +126,10 @@ li a:hover{
 	font-size: 2em;
 }
 
-#Lecon0{
+#Lecon0, #Jeu0{
     height: 50px;
 }
-#Lecon1,#Lecon2,#Lecon3,#Lecon4,#Lecon5,#Lecon6{
+#Lecon1,#Lecon2,#Lecon3,#Lecon4,#Lecon5,#Lecon6,#Jeu1{
     margin-top: 50px;
     height: 50px;
 }
@@ -214,5 +216,139 @@ span{
     flex-direction: column;
     justify-content: center;
 }
+
+#listeBtnJouer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+
+    align-items: center;
+}
+
+#btnAffiche1, #btnAffiche2, #btnAffiche3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #15465e;
+
+    margin: 30px;
+    padding: 50px;
+
+    width: 550px;
+    height: 200px;
+
+    border-radius: 20px;
+    /*box-shadow: 2px 2px 5px 2px black;*/
+}
+#btnAffiche1{
+    background-color: #ec7853;
+}
+#btnAffiche2{
+    background-color: #af4b4d;
+}
+#btnAffiche3{
+    background-color: #7d3046;
+}
+
+
+#btnHaut, #btnBas{
+    margin: 20px auto;
+    height: 45px;
+    width: 400px;
+}
+#btnHaut{
+    margin-top: 40px;
+}
+
+h3{
+    width: 400px;
+    border-radius: 10px;
+    background: #5a111b;
+    box-shadow: 2px 2px 5px 2px black;
+    color: white;
+    text-align: left;
+    font-size: 1.5em;
+    font-family: calibri;
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+
+}
+
+#jouerHeader{
+    background-color: #af4b4d;
+}
+#jouerBody{
+    background-color: #ecb45f;
+}
+
+#reponsesHaut, #reponsesBas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    height: 150px;
+    width: 800px;
+    margin: 20px auto;
+
+    /*background-color: red;*/
+}
+#reponsesBas{
+    /*background-color: blue;*/
+
+}
+
+#reponse1, #reponse2, #reponse3, #reponse4{
+    display: flex;
+    width: 320px;
+    height: 50px;
+
+    margin: 20px auto;
+    margin-top: -40px;
+}
+#reponse1, #reponse2{
+    z-index: 10;
+}
+#reponse3, #reponse4{
+    margin-top: -80px;
+    z-index: 9;
+}
+
+
+#middleJeu{
+    background-color: #15465e;
+    padding-bottom: 20px;
+    width: 950px;
+    height: 500px;
+    border-radius: 50px;
+    margin: auto;
+}
+
+#Score{
+    position: absolute;
+    text-align: center;
+    width: 420px;
+    height: 85px;
+    line-height: 85px;
+    
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+
+    font-family: calibri;
+    font-size: 2.2em;
+    color: white;
+
+    border-radius: 20px;
+    background-color: seagreen;
+    box-shadow: 2px 2px 8px 5px black;
+    opacity: 0.85;
+}
+
+
 
 

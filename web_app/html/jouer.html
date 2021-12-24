@@ -6,20 +6,26 @@
 		<title>Application Chinoise </title>
 		<link rel="stylesheet" type="text/css" href="../styles/style.css">
 		<link rel="icon" type="image/jpg" href="../assets/yin_yang.jpg" />
+		<script type="text/javascript" src="../javascript/main.js"></script>
 		<!-- Mat -->
 	</head>
-	<body>
-		<header>
-			<h1>Jouer</h1>
-
+	<body id="jouerBody">
+		<header id="jouerHeader">
+			<h1><span><img src="../assets/playIcon.png" alt="playIcon" width="40" height="40"/></span>Jouer</h1>
+			<a id="RetourMenu" href="../index.html"><span id="RetourMenuIcon"><img src="../assets/homeIcon.png" alt="homeIcon" width="25" height="25"/></span>Menu</a>
 		</header>
 		<section>
-			<ul>
-				<li><a id="Lecon1" href="#">Leçon 1 : Se saluer, nom et nationalité</a></li>
-				<li><a id="Lecon2" href="#">Leçon 2 : La Chine et le chinois</a></li>
+			<ul id="listeBtn">
+				<!--
+				<li><a id="Lecon1" href="leconPanel.html">Leçon 1 : Se saluer, nom et nationalité</a></li>
+				<li><a id="Lecon2" href="leconPanel.html">Leçon 2 : La Chine et le chinois</a></li>-->
+				<script type="text/javascript">creerBoutonsJeux();</script>
+				<script type="text/javascript">setChoixVoc(0);</script>
+				<script type="text/javascript">setScore(0);</script>
 			</ul>
-
+			
 		</section>
+		
 
 	</body>
 </html>
