@@ -75,7 +75,7 @@ class Lecon{
 			case 2:
 				this.title="La Chine et le chinois";
 				this.liste=[
-					new Vocabulaire("汉语","hàn yǔ","Chinois"),
+					new Vocabulaire("汉语","hàn yǔ","Chinois parlé"),
 					new Vocabulaire("中文","zhōng wén","Chinois"),
 					new Vocabulaire("英语","yīng yǔ","Anglais parlé"),
 					new Vocabulaire("日语","rì yǔ","Japonais parlé"),
@@ -129,6 +129,61 @@ class Lecon{
 					new Vocabulaire("我学汉语","wǒ xué hàn yǔ","J'étudie le chinois")
 				];
 				break;
+			case 5:
+				this.title="Qui est il ? Qu'est-ce que c'est ?";
+				this.liste=[
+					new Vocabulaire("是","shì","Être"),
+					new Vocabulaire("谁","shéi","Qui"),
+					new Vocabulaire("的","de","Particule"),
+					new Vocabulaire("朋友","péng you","Ami"),
+					new Vocabulaire("女朋友","nǚ péng you","Petite amie"),
+					new Vocabulaire("男朋友","nán péng you","Petit ami"),
+					new Vocabulaire("新","xīn","Nouveau"),
+					new Vocabulaire("老","lǎo","Vieux"),
+					new Vocabulaire("大家","dà jiā","Tout le monde"),
+					new Vocabulaire("同学","tóng xué","Camarade de classe"),
+					new Vocabulaire("这","zhè","Celui-ci, ce"),
+					new Vocabulaire("那","nà","Celui-là, ce"),
+					new Vocabulaire("他是谁","tā shì shéi","Qui est-il?"),
+					new Vocabulaire("他是我的朋友","tā shì wǒ de péng you","Il est mon ami")
+				]
+				break;
+			case 6:
+				this.title="Où vas-tu ?";
+				this.liste=[
+					new Vocabulaire("去","qù","Aller"),
+					new Vocabulaire("哪儿","nă r","Où"),
+					new Vocabulaire("电影","diàn yǐng","Film"),
+					new Vocabulaire("电影院","diàn yǐng yuàn","Cinéma"),
+					new Vocabulaire("吃饭","chī fàn","Manger"),
+					new Vocabulaire("食堂","shí táng","Cantine"),
+					new Vocabulaire("图书馆","tú shū guǎn","Bibliothèque"),
+					new Vocabulaire("今天","jīn tiān","Aujourd'hui"),
+					new Vocabulaire("上海","shàng hǎi","Shanghai"),
+					new Vocabulaire("北京","běi jīng","Pékin"),
+					new Vocabulaire("东京","dōng jīng","Tokyo"),
+					new Vocabulaire("巴黎","bā lí","Paris"),
+					new Vocabulaire("伦敦","lún dūn","Londres"),
+					new Vocabulaire("你去哪儿","nǐ qù nă r","Où vas-tu ?"),
+					new Vocabulaire("我去看电影","wǒ qù kàn diàn yǐng","Je vais regarder film")
+				]
+				break;
+			case 7:
+				this.title="Avoir et classificateurs";
+				this.liste=[
+					new Vocabulaire("有","yǒu","Avoir"),
+					new Vocabulaire("没有","méi yǒu","Négation avoir"),
+					new Vocabulaire("只","zhī","Seulement"),
+					new Vocabulaire("词典","cí diǎn","Dictionnaire"),
+					new Vocabulaire("问题","wèn tí","Problème, question"),
+					new Vocabulaire("事儿","shì r","Problème (familier)"),
+					new Vocabulaire("本","běn","Classificateur"),
+					new Vocabulaire("有事儿马","yǒu shì r ma","As-tu des problèmes?"),
+					new Vocabulaire("没事儿","méi shì r","Pas de problème"),
+					new Vocabulaire("有问题马","yǒu wèn tí ma","As-tu une question?"),
+					new Vocabulaire("我有一个问题","wǒ yǒu yī gè wèn tí","J'ai une question")
+				]
+				break;
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -158,7 +213,10 @@ class Lecons{
 			new Lecon(1),
 			new Lecon(2),
 			new Lecon(3),
-			new Lecon(4)
+			new Lecon(4),
+			new Lecon(5),
+			new Lecon(6),
+			new Lecon(7)
 		]
 	}
 	affiche(){
@@ -177,20 +235,40 @@ let lecons = new Lecons();
 *  Permet de générer les boutons des leçons
 *  ===================================
 */
-function creerBoutonsLecons(){
-
+function creerBoutonsLecons(type){
+	//type = 'jeu' ou 'lecon'
 	let leconArray = new Array(lecons.liste.length);
 
+	listeBtnGauche = document.createElement("div");
+	listeBtnGauche.setAttribute('id', "listeBtnGauche");
+	document.getElementById("listeBtn").appendChild(listeBtnGauche);
+	for(let i=0;i<(lecons.liste.length)/2;i++){
+		leconArray[i] = document.createElement("li");
+		leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon2\" href=\""+type+"Panel.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
+		document.getElementById("listeBtnGauche").appendChild(leconArray[i]);
+	}
+	
+	listeBtnDroite = document.createElement("div");
+	listeBtnDroite.setAttribute('id', "listeBtnDroite");
+	document.getElementById("listeBtn").appendChild(listeBtnDroite);
+	for(i=parseInt((lecons.liste.length+1)/2);i<lecons.liste.length;i++){
+		console.log("i = "+i);
+		leconArray[i] = document.createElement("li");
+		leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon2\" href=\""+type+"Panel.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
+		document.getElementById("listeBtnDroite").appendChild(leconArray[i]);
+	}
+
+	/*
 	for(let i=0;i<lecons.liste.length;i++){
 		leconArray[i] = document.createElement("li");
 		leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon"+(i)+"\" href=\"leconPanel.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
-		//leconArray[i].innerHTML = "<a id=\"Lecon"+(i+1)+"\" href=\"leconPanel.html\">Leçon "+(i+1)+" : "+lecons.liste[i].title+"</a></li>";
 		document.getElementById("listeBtn").appendChild(leconArray[i]);
-	}
+	}*/
 }
 
-/* ===================================
+/* =================================== 
 *  Fonction creerBoutonsJeux :
+*  OBSOLETE /!\ grâce au Type 'jeu' ou 'lecon' de creerBoutonsLecons()
 *  Permet de générer les boutons des leçons
 *  ===================================
 */
@@ -201,7 +279,6 @@ function creerBoutonsJeux(){
 	for(let i=0;i<lecons.liste.length;i++){
 		leconArray[i] = document.createElement("li");
 		leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon"+(i)+"\" href=\"jeuPanel.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
-		//leconArray[i].innerHTML = "<a id=\"Lecon"+(i+1)+"\" href=\"leconPanel.html\">Leçon "+(i+1)+" : "+lecons.liste[i].title+"</a></li>";
 		document.getElementById("listeBtn").appendChild(leconArray[i]);
 	}
 }

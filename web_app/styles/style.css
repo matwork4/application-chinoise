@@ -59,7 +59,7 @@ body{
 #middle{
     /*background-color: #15465e;*/
     background-color: rgba(21, 70, 94, 0.9);
-    box-shadow: 2px 2px 10px 2px black;
+    box-shadow: 2px 2px 12px 1px black;
     padding-bottom: 20px;
     width: 950px;
     border-radius: 50px;
@@ -138,7 +138,7 @@ li a:hover{
 #Lecon0, #Jeu0{
     height: 50px;
 }
-#Lecon1,#Lecon2,#Lecon3,#Lecon4,#Lecon5,#Lecon6,#Jeu1{
+#Lecon1,#Lecon2,#Jeu1{
     margin-top: 50px;
     height: 50px;
 }
@@ -224,6 +224,23 @@ span{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#listeBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 50px;
+
+    align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  #listeBtn{
+    flex-direction: column;
+  }
+  #listeBtnDroite{
+    margin-top: -40px;
+  }
 }
 
 #listeBtnJouer{
@@ -334,7 +351,7 @@ h3{
 
 
 #middleJeu{
-    background-color: #15465e;
+    box-shadow: 2px 2px 12px 1px black;
     padding-bottom: 20px;
     width: 950px;
     height: 500px;
