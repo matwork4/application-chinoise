@@ -184,6 +184,31 @@ class Lecon{
 					new Vocabulaire("我有一个问题","wǒ yǒu yī gè wèn tí","J'ai une question")
 				]
 				break;
+			case 8:
+				this.title="Famille et classificateurs";
+				this.liste=[
+					new Vocabulaire("班","bān","Classe, cours"),
+					new Vocabulaire("几","jī","Combien"),
+					new Vocabulaire("家","jiā","Famille, maison"),
+					new Vocabulaire("口","kǒu","Classif., bouche"),
+					new Vocabulaire("买","mǎi","Acheter"),
+					new Vocabulaire("张","zhāng","Classificateur"),
+					new Vocabulaire("票","piào","Ticket, billet"),
+					new Vocabulaire("报","bào","Journal"),
+					new Vocabulaire("种","zhǒng","Type"),
+					new Vocabulaire("无线","wú xiàn","Wi-Fi"),
+					new Vocabulaire("上网","shàng wǎng","Aller sur internet"),
+					new Vocabulaire("卡","kǎ","Carte"),
+					new Vocabulaire("电话卡","diàn huà kǎ","Carte SIM"),
+					new Vocabulaire("信用卡","xìn yòng kǎ","Carte bancaire"),
+					new Vocabulaire("姐姐","jiě jiě","Grande soeur"),
+					new Vocabulaire("妹妹","mèi mèi","Petite soeur"),
+					new Vocabulaire("哥哥","gē gē","Grand frère"),
+					new Vocabulaire("弟弟","dì dì","Petit frère"),
+					new Vocabulaire("大哥","dà gē","Le frère ainé"),
+					new Vocabulaire("小弟","xiǎo dì","Le frère cadet")
+				]
+				break;
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -216,7 +241,8 @@ class Lecons{
 			new Lecon(4),
 			new Lecon(5),
 			new Lecon(6),
-			new Lecon(7)
+			new Lecon(7),
+			new Lecon(8)
 		]
 	}
 	affiche(){
@@ -244,7 +270,11 @@ function creerBoutonsLecons(type){
 	document.getElementById("listeBtn").appendChild(listeBtnGauche);
 	for(let i=0;i<(lecons.liste.length)/2;i++){
 		leconArray[i] = document.createElement("li");
-		leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon2\" href=\""+type+"Panel.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
+		if(type=='jeu'){
+			leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon2\" href=\"choixJeu.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
+		}else{
+			leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon2\" href=\""+type+"Panel.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
+		}
 		document.getElementById("listeBtnGauche").appendChild(leconArray[i]);
 	}
 	
@@ -254,7 +284,11 @@ function creerBoutonsLecons(type){
 	for(i=parseInt((lecons.liste.length+1)/2);i<lecons.liste.length;i++){
 		console.log("i = "+i);
 		leconArray[i] = document.createElement("li");
-		leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon2\" href=\""+type+"Panel.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
+		if(type=='jeu'){
+			leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon2\" href=\"choixJeu.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
+		}else{
+			leconArray[i].innerHTML = "<a type=\"button\" onclick=\"setChoixLecon("+lecons.liste[i].id+")\" id=\"Lecon2\" href=\""+type+"Panel.html\">Leçon "+(i)+" : "+lecons.liste[i].title+"</a></li>";
+		}
 		document.getElementById("listeBtnDroite").appendChild(leconArray[i]);
 	}
 
