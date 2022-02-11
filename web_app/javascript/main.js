@@ -209,6 +209,29 @@ class Lecon{
 					new Vocabulaire("小弟","xiǎo dì","Le frère cadet")
 				]
 				break;
+			case 9:
+				this.title="Les métiers et écoles";
+				this.liste=[
+					new Vocabulaire("医生","Yī shēng","Médecin"),
+					new Vocabulaire("护士","Hù shì","Infirmier"),
+					new Vocabulaire("侓师","Lù shī","Avocat"),
+					new Vocabulaire("记者","Jì zhě","Journaliste"),
+					new Vocabulaire("工作","Gōng zuò","Travail"),
+					new Vocabulaire("工人","Gōng rén","Ouvrier"),
+					new Vocabulaire("员工","Yuán gōng","Employé"),
+					new Vocabulaire("服务员","Fú wù yuán","Serveur"),
+					new Vocabulaire("司机","Sī jī","Chauffeur"),
+					new Vocabulaire("工程师","Gōng chéng shī","Ingénieur"),
+					new Vocabulaire("家庭主妇","Jiā tíng zhǔ fù","Femme au foyer"),
+					new Vocabulaire("个体","Gè tǐ","Auto entrep. (solo)"),
+					new Vocabulaire("老师","Lǎo shī","Enseignant(e)"),
+					new Vocabulaire("学生","Xué shēng","Etudiant(e)"),
+					new Vocabulaire("大学","Dà xué","Université"),
+					new Vocabulaire("高中","Gāo zhōng","Lycée"),
+					new Vocabulaire("中学","Zhōng xué","Collège"),
+					new Vocabulaire("小学","Xiǎo xué","Petite école")
+				]
+				break;
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -242,7 +265,8 @@ class Lecons{
 			new Lecon(5),
 			new Lecon(6),
 			new Lecon(7),
-			new Lecon(8)
+			new Lecon(8),
+			new Lecon(9)
 		]
 	}
 	affiche(){
