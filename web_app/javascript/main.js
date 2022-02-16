@@ -522,11 +522,25 @@ function changeCouleurJeux(){
 	}
 	
 	document.getElementById("jouerTitreLecon").style.background = "#5a111b";
-	//document.getElementById("Precedent").style.background = "#5a111b";
-	//document.getElementById("Retour").style.background = "#5a111b";
-	document.getElementById("Pagination").style.background = "#5a111b";
-	document.getElementById("Terminer").style.background = "#5a111b";
-	document.getElementById("Suivant").style.background = "#5a111b";
+	
+	//document.getElementById("Pagination").style.background = "#5a111b";
+	let elementExists = document.getElementById("Pagination");
+	if( elementExists != null){
+		elementExists.style.background = "#5a111b";
+	}
+	//document.getElementById("Terminer").style.background = "#5a111b";
+	let elementExists2 = document.getElementById("Terminer");
+	if( elementExists2 != null){
+		elementExists2.style.background = "#5a111b";
+	}
+	//document.getElementById("Suivant").style.background = "#5a111b";
+	let elementExists3 = document.getElementById("Suivant");
+	if( elementExists3 != null){
+		elementExists3.style.background = "#5a111b";
+	}
+	
+	
+	
 	
 }
 
@@ -612,7 +626,12 @@ function setScore(num){
 	sessionStorage.setItem('score',num);
 }
 function getScore(){
-	return parseInt(sessionStorage.getItem('score'));
+	let s = sessionStorage.getItem('score');
+	if(s==null){
+		return 0;
+	}else{
+		return parseInt(s);
+	}
 }
 
 /* ===================================
