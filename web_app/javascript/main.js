@@ -138,6 +138,7 @@ class Lecon{
 					new Vocabulaire("朋友","péng you","Ami"),
 					new Vocabulaire("女朋友","nǚ péng you","Petite amie"),
 					new Vocabulaire("男朋友","nán péng you","Petit ami"),
+					new Vocabulaire("单身狗","dān shēn gǒu","Célibataire (chien)"),
 					new Vocabulaire("新","xīn","Nouveau"),
 					new Vocabulaire("老","lǎo","Vieux"),
 					new Vocabulaire("大家","dà jiā","Tout le monde"),
@@ -232,6 +233,38 @@ class Lecon{
 					new Vocabulaire("小学","Xiǎo xué","Petite école")
 				]
 				break;
+			case 10:
+				this.title="Arbre généalogique";
+				this.liste=[
+					new Vocabulaire("甲祖书","Jiǎ zǔ shū","Arbre généalogique"),
+					new Vocabulaire("我","Wǒ","Je, moi"),
+					new Vocabulaire("妹妹","Mèi mei","Petite soeur"),
+					new Vocabulaire("姐姐","Jiě jiě","Grande soeur"),
+					new Vocabulaire("弟弟","Dì dì","Petit frère"),
+					new Vocabulaire("哥哥","Gē gē","Grand frère"),
+					new Vocabulaire("妈妈","Mā mā","Maman"),
+					new Vocabulaire("爸爸","Bà ba","Papa"),
+					new Vocabulaire("外婆","Wài pó","Grand-mère (mat.)"),
+					new Vocabulaire("外公","Wài gōng","Grand-père (mat.)"),
+					new Vocabulaire("奶奶","Nǎi nai","Grand-mère (pat.)"),
+					new Vocabulaire("爷爷","Yé yé","Grand-père (pat.)"),
+					new Vocabulaire("姨妈","Yí mā","Tante (mat.)"),
+					new Vocabulaire("姨父","Yí fu","Mari de tante (mat.)"),
+					new Vocabulaire("舅舅","Jiù jiu","Oncle (mat.)"),
+					new Vocabulaire("舅妈","Jiù mā","Femme d'oncle (mat.)"),
+					new Vocabulaire("姑姑","Gū gū","Tante (pat.)"),
+					new Vocabulaire("姑父","Gū fu","Mari de tante (pat.)"),
+					new Vocabulaire("伯伯","Bó bo","Oncle (pat.)"),
+					new Vocabulaire("伯母","Bó mǔ","Femme d'oncle (pat.)"),
+					new Vocabulaire("表妹","Biǎo mèi","Pet. cousine (mat.)"),
+					new Vocabulaire("表姐","Biǎo jiě","Gra. cousine (mat.)"),
+					new Vocabulaire("表弟","Biǎo dì","Pet. cousin (mat.)"),
+					new Vocabulaire("表哥","Biǎo gē","Gra. cousin (mat.)"),
+					new Vocabulaire("堂妹","Táng mèi","Pet. cousine (pat.)"),
+					new Vocabulaire("堂姐","Táng jiě","Gra. cousine (pat.)"),
+					new Vocabulaire("堂弟","Táng dì","Pet. cousin (pat.)"),
+					new Vocabulaire("堂哥","Táng gē","Gra. cousin (pat.)")
+				]
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -266,7 +299,8 @@ class Lecons{
 			new Lecon(6),
 			new Lecon(7),
 			new Lecon(8),
-			new Lecon(9)
+			new Lecon(9),
+			new Lecon(10)
 		]
 	}
 	affiche(){
