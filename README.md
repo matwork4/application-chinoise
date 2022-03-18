@@ -1,8 +1,8 @@
 # application-chinoise
-Application web d'apprentissage du chinois en utilisant le principe des flashcards, de niveau débutant.
+Application web d'apprentissage du vocabulaire chinois en utilisant le principe des flashcards, niveau débutant.
 
 ---------------------------
-Le cours est structuré en leçons regroupés par thèmes.
+Le vocabulaire est structuré en différentes leçons regroupées par thèmes avec des exemples de phrases.
 
 La partie jeux se divise en six types de traductions :
 - Traduire les caractères en pinyins
