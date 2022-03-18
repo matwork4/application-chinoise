@@ -531,7 +531,7 @@ function creerVocLecon(){
 	for(let i=0;i<symbolesLength;i++){
 		symboles[i] = lecons.liste[idLecon].liste[idVoc].caractere[i];
 		pathSymboles[i] = document.createElement("li");
-		pathSymboles[i].innerHTML = "<img id=\"Symbole\" src=\"../assets/voc/"+symboles[i]+".jpg\"/>"
+		pathSymboles[i].innerHTML = "<img id=\"Symbole\" onclick=\"writeCharacter('"+symboles[i]+"');\" src=\"../assets/voc/"+symboles[i]+".jpg\"/>"
 
 		document.getElementById("listeSymboles").appendChild(pathSymboles[i]);
 	}
@@ -669,7 +669,7 @@ function getScore(){
 }
 
 /* ===================================
-*  Fonction creerVocLecon :
+*  Fonction creerJeuLecon :
 *  Permet de générer les symboles, le pinyin et la traduction du panel Lecon
 *  ===================================
 */
@@ -749,7 +749,7 @@ function creerJeuPanel(){
 		for(let i=0;i<symbolesLength;i++){
 			symboles[i] = lecons.liste[idLecon].liste[indicesMelanges[idVoc]].caractere[i];
 			pathSymboles[i] = document.createElement("li");
-			pathSymboles[i].innerHTML = "<img id=\"Symbole\" src=\"../assets/voc/"+symboles[i]+".jpg\"/>"
+			pathSymboles[i].innerHTML = "<img id=\"Symbole\" onclick=\"writeCharacter('"+symboles[i]+"');\" src=\"../assets/voc/"+symboles[i]+".jpg\"/>"
 
 			document.getElementById("listeSymboles").appendChild(pathSymboles[i]);
 		}

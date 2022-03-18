@@ -93,6 +93,11 @@ ul{
     width: 110px;
     height: 110px;
     margin: 20px;
+    cursor: pointer;
+}
+
+#Symbole:hover{
+    background-color: lightgrey;
 }
 
 #listeSymboles{
