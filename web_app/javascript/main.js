@@ -265,6 +265,58 @@ class Lecon{
 					new Vocabulaire("堂弟","Táng dì","Pet. cousin (pat.)"),
 					new Vocabulaire("堂哥","Táng gē","Gra. cousin (pat.)")
 				]
+			case 11:
+				this.title="L'expression de l'action en cours";
+				this.liste=[
+					new Vocabulaire("在","zài","Action en cours"),
+					new Vocabulaire("正在","zhèng zài","Action en cours"),
+					new Vocabulaire("电视","diàn shì","Télévision"),
+					new Vocabulaire("练习","liàn xí","Devoirs"),
+					new Vocabulaire("干","gàn","Faire"),
+					new Vocabulaire("逛","guàng","Se promener"),
+					new Vocabulaire("商店","shāng diàn","Magasin"),
+					new Vocabulaire("连环画","lián huán huà","BD"),
+					new Vocabulaire("从","cóng","De, depuis"),
+					new Vocabulaire("就","jiù","Déjà, aussitôt")
+				]
+				break;
+			case 12:
+				this.title="Demander l'heure";
+				this.liste=[
+					new Vocabulaire("电","diàn","Heure"),
+					new Vocabulaire("钟","zhōng","Heure"),
+					new Vocabulaire("差","chà","Manquer, moins"),
+					new Vocabulaire("刻","kè","Quart d'heure"),
+					new Vocabulaire("分","fēn","Minute"),
+					new Vocabulaire("半","bàn","Moitié"),
+					new Vocabulaire("时间","shí jiān","Temps, heure"),
+					new Vocabulaire("凌晨","líng chén","Petit matin, aube"),
+					new Vocabulaire("早上","zăo shang","Matin"),
+					new Vocabulaire("上午","shàng wŭ","Matinée"),
+					new Vocabulaire("下午","xià wŭ","Après-midi"),
+					new Vocabulaire("晚上","wăn shang","Soir"),
+					new Vocabulaire("午夜","wŭ yè","Minuit"),
+					new Vocabulaire("夜间","yè jiān","Nuit"),
+					new Vocabulaire("上","shàng","Commencer"),
+					new Vocabulaire("下","xià","Finir")
+				]
+				break;
+			case 13:
+				this.title="Fixer un rendez-vous";
+				this.liste=[
+					new Vocabulaire("咱们","zán men","Nous"),
+					new Vocabulaire("电影","diàn yĭng","Film"),
+					new Vocabulaire("开演","kāi yăn","Commencer (film)"),
+					new Vocabulaire("开始","kāi shĭ","Commencer (genéral)"),
+					new Vocabulaire("上课","shàng kè","Commencer (cours)"),
+					new Vocabulaire("下课","xià kè","Finir le cours"),
+					new Vocabulaire("见面","jiàn miàn","Se rencontrer"),
+					new Vocabulaire("上班","shàng bān","Commencer (travail)"),
+					new Vocabulaire("下班","xià bān","Finir (travail)"),
+					new Vocabulaire("等","děng","Attendre"),
+					new Vocabulaire("下课见","xià kè jiàn","Se voir après le cours")
+				]
+				break;
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -300,7 +352,10 @@ class Lecons{
 			new Lecon(7),
 			new Lecon(8),
 			new Lecon(9),
-			new Lecon(10)
+			new Lecon(10),
+			new Lecon(11),
+			new Lecon(12),
+			new Lecon(13)
 		]
 	}
 	affiche(){
