@@ -38,6 +38,7 @@ body{
 }
 
 #choix{
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
 }
@@ -73,7 +74,6 @@ a:hover{
 }
 
 #fermer{
-    margin-top: 20px;
     color: white;
     background: rgb(180, 0, 0, 0.7);
 }

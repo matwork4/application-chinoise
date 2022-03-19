@@ -62,16 +62,23 @@ function writeInside(target){
 }
 
 function quizz(target){
-	let c = getCaractere();
-
 	writer.showCharacter = false;
-	/*
-	var writer = HanziWriter.create(target, c, {
-  		width: 150,
-  		height: 150,
-  		showCharacter: false,
-  		padding: 5
-	});*/
 
 	writer.quiz();
+}
+
+let isRadical = false;
+
+function afficheRadical(target){
+	console.log("affiche radical");
+
+	if(!isRadical){
+		writer.updateColor('radicalColor','#ff4d4d');
+		isRadical = true;
+	}else{
+		writer.updateColor('radicalColor','#000000');
+		isRadical = false;
+	}
+	
+
 }

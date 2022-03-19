@@ -98,6 +98,7 @@ ul{
 
 #Symbole:hover{
     background-color: lightgrey;
+    transition: 0.2s;
 }
 
 #listeSymboles{
@@ -134,6 +135,8 @@ li a{
 }
 li a:hover{
     background-color: lightgrey;
+    box-shadow: 5px 5px 10px 4px black;
+    transition: 0.2s;
 }
 
 #Apprendre,#Jouer{
@@ -183,6 +186,7 @@ span{
 }
 #RetourMenu:hover{
     background-color: lightgrey;
+    transition: 0.2s;
 }
 
 .bottom{
@@ -213,6 +217,7 @@ span{
 }
 #Suivant:hover, #Precedent:hover, #Terminer:hover, #Retour:hover{
     background: #06190e;
+    transition: 0.2s;
 }
 
 #Terminer, #Retour{
