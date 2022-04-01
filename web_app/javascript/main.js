@@ -317,6 +317,58 @@ class Lecon{
 					new Vocabulaire("下课见","xià kè jiàn","Se voir après le cours")
 				]
 				break;
+			case 14:
+				this.title="Quel jour sommes-nous ?";
+				this.liste=[
+					new Vocabulaire("今天","jīn tiān","Aujourd'hui"),
+					new Vocabulaire("明天","míng tiān","Demain"),
+					new Vocabulaire("后天","hòu tiān","Après-demain"),
+					new Vocabulaire("昨天","zuó tiān","Hier"),
+					new Vocabulaire("前天","qiántiān","Avant-hier"),
+					new Vocabulaire("星期","xīng qī","Semaine"),
+					new Vocabulaire("星期一","xīng qī yī","Lundi"),
+					new Vocabulaire("星期二","xīng qī èr","Mardi"),
+					new Vocabulaire("星期三","xīng qī sān","Mercredi"),
+					new Vocabulaire("星期四","xīng qī sì","Jeudi"),
+					new Vocabulaire("星期五","xīng qī wŭ","Vendredi"),
+					new Vocabulaire("月","yuè","Mois"),
+					new Vocabulaire("一月","yī yuè","Janvier"),
+					new Vocabulaire("二月","èr yuè","Février"),
+					new Vocabulaire("三月","sān yuè","Mars"),
+					new Vocabulaire("四月","sì yuè","Avril"),
+					new Vocabulaire("五月","wŭ yuè","Mai"),
+					new Vocabulaire("生日","shēng rì","Anniversaire"),
+					new Vocabulaire("今年","jīn nián","Cette année"),
+					new Vocabulaire("明年","míng nián","Année prochaine"),
+					new Vocabulaire("去年","qù nián","Année dernière"),
+					new Vocabulaire("什么时候","shén me shí hou","Quand ?"),
+					new Vocabulaire("日期","rì qī","Date")
+				]
+				break;
+			case 15:
+				this.title="Décrire sa journée";
+				this.liste=[
+					new Vocabulaire("床","chuáng","Lit"),
+					new Vocabulaire("起床","qĭ chuáng","Se lever"),
+					new Vocabulaire("睡觉","shuì jiào","Se coucher"),
+					new Vocabulaire("回","huí","Retourner, rentrer"),
+					new Vocabulaire("回家","huí jiā","Rentrer à la maison"),
+					new Vocabulaire("回国","huí guó","Rentrer au pays"),
+					new Vocabulaire("打算","dă suàn","Compter, projeter"),
+					new Vocabulaire("玩儿","wán r","S'amuser, jouer"),
+					new Vocabulaire("跟","gēn","Avec"),
+					new Vocabulaire("一起","yì qĭ","Ensemble"),
+					new Vocabulaire("滑","huá","Glisser"),
+					new Vocabulaire("雪","xuĕ","Neige"),
+					new Vocabulaire("滑雪","huá xuĕ","Skier"),
+					new Vocabulaire("下雪","xià xuě","Il neige"),
+					new Vocabulaire("下雨","xià yǔ","Il pleut"),
+					new Vocabulaire("浪","làng","Vague"),
+					new Vocabulaire("冲浪","chōng làng","Surfer"),
+					new Vocabulaire("星","xīng","étoile"),
+					new Vocabulaire("好梦","hǎo mèng","Bonne nuit (rèves)")
+				]
+				break;
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -355,7 +407,9 @@ class Lecons{
 			new Lecon(10),
 			new Lecon(11),
 			new Lecon(12),
-			new Lecon(13)
+			new Lecon(13),
+			new Lecon(14),
+			new Lecon(15)
 		]
 	}
 	affiche(){
