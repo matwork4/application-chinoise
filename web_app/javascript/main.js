@@ -369,6 +369,42 @@ class Lecon{
 					new Vocabulaire("好梦","hǎo mèng","Bonne nuit (rèves)")
 				]
 				break;
+			case 16:
+				this.title="Parler de ses loisirs";
+				this.liste=[
+					new Vocabulaire("喜欢","xĭ huan","Aimer"),
+					new Vocabulaire("跳舞","tiào wŭ","Danser"),
+					new Vocabulaire("爱好","ài hào","Passe-temps, loisir"),
+					new Vocabulaire("上网","shàng wăng","Aller sur internet"),
+					new Vocabulaire("听","tīng","écouter"),
+					new Vocabulaire("音乐","yīn yuè","Musique"),
+					new Vocabulaire("运动","yùn dòng","Sport"),
+					new Vocabulaire("都","dōu","Tout, tous"),
+					new Vocabulaire("踢","tī","Coup de pied"),
+					new Vocabulaire("足","zú","Pied"),
+					new Vocabulaire("球","qiú","Ballon"),
+					new Vocabulaire("足球","zú qiú","Football"),
+					new Vocabulaire("迷","mí","fan (de qq)"),
+					new Vocabulaire("武术","wŭ shù","Arts martiaux"),
+					new Vocabulaire("常常","chángcháng","Souvent"),
+					new Vocabulaire("打太极拳","dǎ tài jí quán","Faire du tai-chi")
+				]
+				break;
+			case 17:
+				this.title="Complément de degré 得 (dé)";
+				this.liste=[
+					new Vocabulaire("会","huì","être capable de"),
+					new Vocabulaire("歌","gē","Chanson"),
+					new Vocabulaire("唱歌","chàng gē","Chanter"),
+					new Vocabulaire("怎么样","zĕn me yàng","Comment"),
+					new Vocabulaire("得","dé","Particule"),
+					new Vocabulaire("非常","fēi cháng","Très, extrêmement"),
+					new Vocabulaire("汉字","Hàn zì","Caractère chinois"),
+					new Vocabulaire("写","xiĕ","écrire"),
+					new Vocabulaire("车","chē","Véhicule, voiture"),
+					new Vocabulaire("开车","kāi chē","Conduire")
+				]
+				break;
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -409,7 +445,9 @@ class Lecons{
 			new Lecon(12),
 			new Lecon(13),
 			new Lecon(14),
-			new Lecon(15)
+			new Lecon(15),
+			new Lecon(16),
+			new Lecon(17)
 		]
 	}
 	affiche(){
