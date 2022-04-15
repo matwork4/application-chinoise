@@ -405,6 +405,18 @@ class Lecon{
 					new Vocabulaire("开车","kāi chē","Conduire")
 				]
 				break;
+			case 18:
+				this.title="Expérience passée 过 (guò)";
+				this.liste=[
+					new Vocabulaire("过","guò","Suffixe verbal"),
+					new Vocabulaire("次","cì","fois"),
+					new Vocabulaire("部","bù","Portion, unité"),
+					new Vocabulaire("鸭","yā","Canard"),
+					new Vocabulaire("烤","kăo","Grillé"),
+					new Vocabulaire("烤鸭","kăo yā","Canard laqué"),
+					new Vocabulaire("还","hái","Encore")
+				]
+				break;
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -447,7 +459,8 @@ class Lecons{
 			new Lecon(14),
 			new Lecon(15),
 			new Lecon(16),
-			new Lecon(17)
+			new Lecon(17),
+			new Lecon(18)
 		]
 	}
 	affiche(){
