@@ -434,17 +434,18 @@ class Lecon{
 					new Vocabulaire("し","shi","shi"),
 					new Vocabulaire("す","su","su"),
 					new Vocabulaire("せ","se","se"),
-					new Vocabulaire("そ","so","so"),
-					new Vocabulaire("た","ta","ta"),
-					new Vocabulaire("ち","chi","chi"),
-					new Vocabulaire("つ","tsu","tsu"),
-					new Vocabulaire("て","te","te"),
-					new Vocabulaire("と","to","to")
+					new Vocabulaire("そ","so","so")
+					
 				]
 				break;
 			case 20:
 				this.title="Hiragana (part 2 NHM)";
 				this.liste=[
+					new Vocabulaire("た","ta","ta"),
+					new Vocabulaire("ち","chi","chi"),
+					new Vocabulaire("つ","tsu","tsu"),
+					new Vocabulaire("て","te","te"),
+					new Vocabulaire("と","to","to"),
 					new Vocabulaire("な","na","na"),
 					new Vocabulaire("に","ni","ni"),
 					new Vocabulaire("ぬ","nu","nu"),
@@ -454,17 +455,17 @@ class Lecon{
 					new Vocabulaire("ひ","hi","hi"),
 					new Vocabulaire("ふ","fu","fu"),
 					new Vocabulaire("へ","he","he"),
-					new Vocabulaire("ほ","ho","ho"),
-					new Vocabulaire("ま","ma","ma"),
-					new Vocabulaire("み","mi","mi"),
-					new Vocabulaire("む","mu","mu"),
-					new Vocabulaire("め","me","me"),
-					new Vocabulaire("も","mo","mo")
+					new Vocabulaire("ほ","ho","ho")
 				]
 				break;
 			case 21:
 				this.title="Hiragana (part 3 YRW)";
 				this.liste=[
+					new Vocabulaire("ま","ma","ma"),
+					new Vocabulaire("み","mi","mi"),
+					new Vocabulaire("む","mu","mu"),
+					new Vocabulaire("め","me","me"),
+					new Vocabulaire("も","mo","mo"),
 					new Vocabulaire("や","ya","ya"),
 					new Vocabulaire("ゆ","yu","yu"),
 					new Vocabulaire("よ","yo","yo"),
