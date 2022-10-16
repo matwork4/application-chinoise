@@ -417,6 +417,140 @@ class Lecon{
 					new Vocabulaire("还","hái","Encore")
 				]
 				break;
+			case 19:
+				this.title="Hiragana (part 1 KST)";
+				this.liste=[
+					new Vocabulaire("あ","a","a"),
+					new Vocabulaire("い","i","i"),
+					new Vocabulaire("う","u","u"),
+					new Vocabulaire("え","e","e"),
+					new Vocabulaire("お","o","o"),
+					new Vocabulaire("か","ka","ka"),
+					new Vocabulaire("き","ki","ki"),
+					new Vocabulaire("く","ku","ku"),
+					new Vocabulaire("け","ke","ke"),
+					new Vocabulaire("こ","ko","ko"),
+					new Vocabulaire("さ","sa","sa"),
+					new Vocabulaire("し","shi","shi"),
+					new Vocabulaire("す","su","su"),
+					new Vocabulaire("せ","se","se"),
+					new Vocabulaire("そ","so","so"),
+					new Vocabulaire("た","ta","ta"),
+					new Vocabulaire("ち","chi","chi"),
+					new Vocabulaire("つ","tsu","tsu"),
+					new Vocabulaire("て","te","te"),
+					new Vocabulaire("と","to","to")
+				]
+				break;
+			case 20:
+				this.title="Hiragana (part 2 NHM)";
+				this.liste=[
+					new Vocabulaire("な","na","na"),
+					new Vocabulaire("に","ni","ni"),
+					new Vocabulaire("ぬ","nu","nu"),
+					new Vocabulaire("ね","ne","ne"),
+					new Vocabulaire("の","no","no"),
+					new Vocabulaire("は","ha","ha"),
+					new Vocabulaire("ひ","hi","hi"),
+					new Vocabulaire("ふ","fu","fu"),
+					new Vocabulaire("へ","he","he"),
+					new Vocabulaire("ほ","ho","ho"),
+					new Vocabulaire("ま","ma","ma"),
+					new Vocabulaire("み","mi","mi"),
+					new Vocabulaire("む","mu","mu"),
+					new Vocabulaire("め","me","me"),
+					new Vocabulaire("も","mo","mo")
+				]
+				break;
+			case 21:
+				this.title="Hiragana (part 3 YRW)";
+				this.liste=[
+					new Vocabulaire("や","ya","ya"),
+					new Vocabulaire("ゆ","yu","yu"),
+					new Vocabulaire("よ","yo","yo"),
+					new Vocabulaire("ら","ra","la"),
+					new Vocabulaire("り","ri","li"),
+					new Vocabulaire("る","ru","lu"),
+					new Vocabulaire("れ","re","le"),
+					new Vocabulaire("ろ","ro","lo"),
+					new Vocabulaire("わ","wa","wa"),
+					new Vocabulaire("を","wo","wo"),
+					new Vocabulaire("ん","n","n")
+				]
+				break;
+			case 22:
+				this.title="Hiragana (part 4 GZDBP)";
+				this.liste=[
+					new Vocabulaire("が","ga","ga"),
+					new Vocabulaire("ぎ","gi","gi"),
+					new Vocabulaire("ぐ","gu","gu"),
+					new Vocabulaire("げ","ge","ge"),
+					new Vocabulaire("ご","go","go"),
+					new Vocabulaire("ざ","za","za"),
+					new Vocabulaire("じ","zi","zi"),
+					new Vocabulaire("ず","zu","zu"),
+					new Vocabulaire("ぜ","ze","ze"),
+					new Vocabulaire("ぞ","zo","zo"),
+					new Vocabulaire("だ","da","da"),
+					new Vocabulaire("ぢ","di","di"),
+					new Vocabulaire("づ","du","du"),
+					new Vocabulaire("で","de","de"),
+					new Vocabulaire("ど","do","do"),
+					new Vocabulaire("ば","ba","ba"),
+					new Vocabulaire("び","bi","bi"),
+					new Vocabulaire("ぶ","bu","bu"),
+					new Vocabulaire("べ","be","be"),
+					new Vocabulaire("ぼ","bo","bo"),
+					new Vocabulaire("ぱ","pa","pa"),
+					new Vocabulaire("ぴ","pi","pi"),
+					new Vocabulaire("ぷ","pu","pu"),
+					new Vocabulaire("ぺ","pe","pe"),
+					new Vocabulaire("ぽ","po","po")
+				]
+				break;
+			case 23:
+				this.title="Hiragana (part 5)";
+				this.liste=[
+					new Vocabulaire("きゃ","kya","kya"),
+					new Vocabulaire("きゅ","kyu","kyu"),
+					new Vocabulaire("きょ","kyo","kyo"),
+					new Vocabulaire("しゃ","sha","sha"),
+					new Vocabulaire("しゅ","shu","shu"),
+					new Vocabulaire("しょ","sho","sho"),
+					new Vocabulaire("ちゃ","cha","cha"),
+					new Vocabulaire("ちゅ","chu","chu"),
+					new Vocabulaire("ちょ","cho","cho"),
+					new Vocabulaire("にゃ","nya","nya"),
+					new Vocabulaire("にゅ","nyu","nyu"),
+					new Vocabulaire("にょ","nyo","nyo"),
+					new Vocabulaire("ひゃ","hya","hya"),
+					new Vocabulaire("ひゅ","hyu","hyu"),
+					new Vocabulaire("ひょ","hyo","hyo"),
+					new Vocabulaire("みゃ","mya","mya"),
+					new Vocabulaire("みゅ","myu","myu"),
+					new Vocabulaire("みょ","myo","myo"),
+					new Vocabulaire("りゃ","rya","rya"),
+					new Vocabulaire("りゅ","ryu","ryu"),
+					new Vocabulaire("りょ","ryo","ryo")
+				]
+				break;
+			case 24:
+				this.title="Hiragana (part 6)";
+				this.liste=[
+					new Vocabulaire("ぎゃ","gya","gya"),
+					new Vocabulaire("ぎゅ","gyu","gyu"),
+					new Vocabulaire("ぎょ","gyo","gyo"),
+					new Vocabulaire("じゃ","ja","ja"),
+					new Vocabulaire("じゅ","ju","ju"),
+					new Vocabulaire("じょ","jo","jo"),
+					new Vocabulaire("びゃ","bya","bya"),
+					new Vocabulaire("びゅ","byu","byu"),
+					new Vocabulaire("びょ","byo","byo"),
+					new Vocabulaire("ぴゃ","pya","pya"),
+					new Vocabulaire("ぴゅ","pyu","pyu"),
+					new Vocabulaire("ぴょ","pyo","pyo")
+				]
+				break;
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -460,7 +594,13 @@ class Lecons{
 			new Lecon(15),
 			new Lecon(16),
 			new Lecon(17),
-			new Lecon(18)
+			new Lecon(18),
+			new Lecon(19),
+			new Lecon(20),
+			new Lecon(21),
+			new Lecon(22),
+			new Lecon(23),
+			new Lecon(24)
 		]
 	}
 	affiche(){
