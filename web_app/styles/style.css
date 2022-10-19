@@ -137,6 +137,7 @@ li a:hover{
     background-color: lightgrey;
     box-shadow: 5px 5px 10px 4px black;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 #Apprendre,#Jouer{
@@ -444,4 +445,8 @@ h3{
 
 #Credits li{
     margin: 10px auto;
+}
+
+*{
+    zoom: 0.965;
 }
