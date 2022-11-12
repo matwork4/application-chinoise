@@ -435,7 +435,6 @@ class Lecon{
 					new Vocabulaire("す","su","su"),
 					new Vocabulaire("せ","se","se"),
 					new Vocabulaire("そ","so","so")
-					
 				]
 				break;
 			case 20:
@@ -552,6 +551,97 @@ class Lecon{
 					new Vocabulaire("ぴょ","pyo","pyo")
 				]
 				break;
+			case 25:
+				this.title="Katakana (part 1 KST)";
+				this.liste=[
+					new Vocabulaire("ア","a","a"),
+					new Vocabulaire("イ","i","i"),
+					new Vocabulaire("ウ","u","u"),
+					new Vocabulaire("エ","e","e"),
+					new Vocabulaire("オ","o","o"),
+					new Vocabulaire("カ","ka","ka"),
+					new Vocabulaire("キ","ki","ki"),
+					new Vocabulaire("ク","ku","ku"),
+					new Vocabulaire("ケ","ke","ke"),
+					new Vocabulaire("コ","ko","ko"),
+					new Vocabulaire("サ","sa","sa"),
+					new Vocabulaire("シ","shi","shi"),
+					new Vocabulaire("ス","su","su"),
+					new Vocabulaire("セ","se","se"),
+					new Vocabulaire("ソ","so","so")
+				]
+				break;
+			case 26:
+				this.title="Katakana (part 2 NHM)";
+				this.liste=[
+					new Vocabulaire("タ","ta","ta"),
+					new Vocabulaire("チ","chi","chi"),
+					new Vocabulaire("ツ","tsu","tsu"),
+					new Vocabulaire("テ","te","te"),
+					new Vocabulaire("ト","to","to"),
+					new Vocabulaire("ナ","na","na"),
+					new Vocabulaire("ニ","ni","ni"),
+					new Vocabulaire("ヌ","nu","nu"),
+					new Vocabulaire("ネ","ne","ne"),
+					new Vocabulaire("ノ","no","no"),
+					new Vocabulaire("ハ","ha","ha"),
+					new Vocabulaire("ヒ","hi","hi"),
+					new Vocabulaire("フ","fu","fu"),
+					new Vocabulaire("ヘ","he","he"),
+					new Vocabulaire("ホ","ho","ho")
+				]
+				break;
+			case 27:
+				this.title="Katakana (part 3 YRW)";
+				this.liste=[
+					new Vocabulaire("マ","ma","ma"),
+					new Vocabulaire("ミ","mi","mi"),
+					new Vocabulaire("ム","mu","mu"),
+					new Vocabulaire("メ","me","me"),
+					new Vocabulaire("モ","mo","mo"),
+					new Vocabulaire("ヤ","ya","ya"),
+					new Vocabulaire("ユ","yu","yu"),
+					new Vocabulaire("ヨ","yo","yo"),
+					new Vocabulaire("ラ","ra","la"),
+					new Vocabulaire("リ","ri","li"),
+					new Vocabulaire("ル","ru","lu"),
+					new Vocabulaire("レ","re","le"),
+					new Vocabulaire("ロ","ro","lo"),
+					new Vocabulaire("ワ","wa","wa"),
+					new Vocabulaire("ヲ","wo","wo"),
+					new Vocabulaire("ン","n","n")
+				]
+				break;
+			case 28:
+				this.title="Katakana (part 4 GZDBP)";
+				this.liste=[
+					new Vocabulaire("ガ","ga","ga"),
+					new Vocabulaire("ギ","gi","gi"),
+					new Vocabulaire("グ","gu","gu"),
+					new Vocabulaire("ゲ","ge","ge"),
+					new Vocabulaire("ゴ","go","go"),
+					new Vocabulaire("ザ","za","za"),
+					new Vocabulaire("ジ","zi","zi"),
+					new Vocabulaire("ズ","zu","zu"),
+					new Vocabulaire("ゼ","ze","ze"),
+					new Vocabulaire("ゾ","zo","zo"),
+					new Vocabulaire("ダ","da","da"),
+					new Vocabulaire("ヂ","di","di"),
+					new Vocabulaire("ヅ","du","du"),
+					new Vocabulaire("デ","de","de"),
+					new Vocabulaire("ド","do","do"),
+					new Vocabulaire("バ","ba","ba"),
+					new Vocabulaire("ビ","bi","bi"),
+					new Vocabulaire("ブ","bu","bu"),
+					new Vocabulaire("ベ","be","be"),
+					new Vocabulaire("ボ","bo","bo"),
+					new Vocabulaire("パ","pa","pa"),
+					new Vocabulaire("ピ","pi","pi"),
+					new Vocabulaire("プ","pu","pu"),
+					new Vocabulaire("ペ","pe","pe"),
+					new Vocabulaire("ポ","po","po")
+				]
+				break;
 			default:
 				console.log("Erreur : idLecon erroné");
 		}
@@ -601,7 +691,11 @@ class Lecons{
 			new Lecon(21),
 			new Lecon(22),
 			new Lecon(23),
-			new Lecon(24)
+			new Lecon(24),
+			new Lecon(25),
+			new Lecon(26),
+			new Lecon(27),
+			new Lecon(28)
 		]
 	}
 	affiche(){
